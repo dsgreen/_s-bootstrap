@@ -46,7 +46,21 @@ function under_boot_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
+
+    // support for custom image sizes (example)
+    /*
+    add_image_size( 'xyz-sm', 100, 100 );
+    add_image_size( 'xyz-md', 300, 300 );
+
+    add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+    function my_custom_sizes( $sizes ) {
+        return array_merge( $sizes, array(
+            'grid-sm' => __( 'XYZ SM' ),
+            'grid-md' => __( 'XYZ MD' )
+        ) );
+    }
+    */
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
