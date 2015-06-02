@@ -84,10 +84,16 @@ function under_boot_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
+    /*
 	add_theme_support( 'custom-background', apply_filters( 'under_boot_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+    */
+
+    // Hide WordPress version in HTML source
+    add_filter( 'the_generator', '__return_null' );
+
 }
 endif; // under_boot_setup
 add_action( 'after_setup_theme', 'under_boot_setup' );
