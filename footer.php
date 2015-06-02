@@ -8,18 +8,18 @@
  */
 ?>
 
-	</div><!-- #content -->
+            </div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'under-boot' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'under-boot' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'under-boot' ), 'UnderBoot', '<a href="http://douglasgreen.com" rel="designer">Douglas Green</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+            <footer id="colophon" class="site-footer" role="contentinfo">
+                <div class="site-info container-fluid">
+                    <p><a href="<?php echo esc_url( __( 'http://wordpress.org/', 'under-boot' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'under-boot' ), 'WordPress' ); ?></a>
+                    <span class="sep"> | </span>
+                    <?php printf( __( 'Theme: %1$s by %2$s.', 'under-boot' ), 'UnderBoot', '<a href="http://douglasgreen.com" rel="designer">Douglas Green</a>' ); ?></p>
+                </div><!-- .site-info -->
+            </footer><!-- #colophon -->
+        </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
-</body>
+    </body>
 </html>
