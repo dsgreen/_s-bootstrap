@@ -12,9 +12,9 @@
 
             <footer id="colophon" class="site-footer" role="contentinfo">
                 <div class="site-info container-fluid">
-                    <p><a href="<?php echo esc_url( __( 'http://wordpress.org/', 'under-boot' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'under-boot' ), 'WordPress' ); ?></a>
+                    <p><a href="<?php echo esc_url( __( 'http://wordpress.org/', 'under-boot' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'under-boot' ), 'WordPress' ); ?></a>
                     <span class="sep"> | </span>
-                    <?php printf( __( 'Theme: %1$s by %2$s.', 'under-boot' ), 'UnderBoot', '<a href="http://douglasgreen.com" rel="designer">Douglas Green</a>' ); ?></p>
+                    <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'under-boot' ), 'UnderBoot', '<a href="http://douglasgreen.com" rel="designer">Douglas Green</a>' ); ?></p>
                 </div><!-- .site-info -->
             </footer><!-- #colophon -->
         </div><!-- #page -->

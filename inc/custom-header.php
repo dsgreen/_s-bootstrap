@@ -46,7 +46,7 @@ function under_boot_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
-	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
+	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value.
 	if ( HEADER_TEXTCOLOR == $header_text_color ) {
 		return;
 	}
@@ -64,7 +64,7 @@ function under_boot_header_style() {
 			clip: rect(1px, 1px, 1px, 1px);
 		}
 	<?php
-		// If the user has set a custom color for the text use that
+		// If the user has set a custom color for the text use that.
 		else :
 	?>
 		.site-title a,

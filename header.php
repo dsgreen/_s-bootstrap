@@ -24,7 +24,7 @@
     </head>
     <body <?php body_class(); ?>>
         <div id="page" class="hfeed site">
-            <a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content', 'under-boot' ); ?></a>
+            <a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'under-boot' ); ?></a>
 
             <header id="masthead" class="site-header" role="banner">
                 <nav id="site-navigation" class="main-navigation navbar navbar-inverse" role="navigation">
@@ -32,7 +32,7 @@
                         <div class="navbar-header">
                             <a class="site-title navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="primary-menu" aria-expanded="false">
-                                <span class="sr-only"><?php _e( 'Toggle navigation', 'under-boot' ); ?></span>
+                                <span class="sr-only"><?php esc_html_e( 'Toggle navigation', 'under-boot' ); ?></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
