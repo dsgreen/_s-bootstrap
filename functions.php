@@ -118,7 +118,7 @@ add_action( 'after_setup_theme', '_s_content_width', 0 );
  */
 function under_boot_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'under-boot' ),
+		'name'          => esc_html__( 'Sidebar', 'under-boot' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
