@@ -130,6 +130,67 @@ function under_boot_widgets_init() {
 add_action( 'widgets_init', 'under_boot_widgets_init' );
 
 /**
+ * Custom post type example.
+ *
+ * @link https://codex.wordpress.org/Function_Reference/register_post_type
+ */
+function under_boot_project_post_type() {
+    register_post_type( 'ub_projects',
+        array(
+            'labels' => array(
+                'name'               => __( 'Projects', 'under-boot' ),
+                'singular_name'      => __( 'Project',  'under-boot' ),
+                'menu_name'          => __( 'Projects', 'under-boot' ),
+                'name_admin_bar'     => __( 'Project',  'under-boot' ),
+                'all_items'          => __( 'All Projects', 'under-boot' ),
+                'add_new'            => __( 'Add New',  'under-boot' ),
+                'add_new_item'       => __( 'Add New Project',  'under-boot' ),
+                'edit_item'          => __( 'Edit Project',  'under-boot' ),
+                'new_item'           => __( 'New Project',  'under-boot' ),
+                'view_item'          => __( 'View Project',  'under-boot' ),
+                'search_items'       => __( 'Search Projects', 'under-boot' ),
+                'not_found'          => __( 'No Projects found', 'under-boot' ),
+                'not_found_in_trash' => __( 'No Projects found in Trash', 'under-boot' ),
+                'parent_item_colon'  => __( 'Parent Project', 'under-boot' )
+            ),
+            'public'              => true,
+            'exclude_from_search' => false,
+            'publicly_queryable'  => true,
+            'show_ui'             => true,
+            'show_in_nav_menus'   => true,
+            'show_in_menu'        => true,
+            'show_in_admin_bar'   => true,
+            'menu_position'       => 20,
+            'menu_icon'           => 'dashicons-admin-page',
+            'capability_type'     => 'post',
+            'hierarchical'        => true,
+            'supports'            => array(
+                'title',
+                'editor',
+                'author',
+                'thumbnail',
+                'excerpt',
+                'trackbacks',
+                'custom-fields',
+                //'comments',
+                'revisions',
+                'page-attributes'
+                //'post-formats'
+                //'genesis-seo'
+            ),
+            'has_archive'         => true,
+            'rewrite'             => array(
+                'slug' => 'projects',
+                'with_front' => false
+            ),
+            'query_var'           => true,
+            'can_export'          => true
+        )
+    );
+}
+add_action( 'init', 'under_boot_project_post_type' );
+
+/**
  * Enqueue scripts and styles.
  */
 function under_boot_scripts() {
