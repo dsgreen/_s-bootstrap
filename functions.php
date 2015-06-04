@@ -190,6 +190,75 @@ function under_boot_project_post_type() {
 }
 add_action( 'init', 'under_boot_project_post_type' );
 
+function under_boot_create_taxonomies() {
+
+    // Add a taxonomy like categories
+    $labels = array(
+        'name'              => 'Project Categories',
+        'singular_name'     => 'Project Category',
+        'menu_name'         => 'Project Categories',
+        'all_items'         => 'All Project Categories',
+        'edit_item'         => 'Edit Project Category',
+        'view_item'         => 'View Project Category',
+        'update_item'       => 'Update Project Category',
+        'add_new_item'      => 'Add New Project Category',
+        'new_item_name'     => 'New Project Category Name',
+        'parent_item'       => 'Parent Project Category',
+        'parent_item_colon' => 'Parent Project Category:',
+        'search_items'      => 'Search Project Categories',
+        'not_found'         => 'No Project Categories found.'
+    );
+    $args = array(
+        'labels'            => $labels,
+        'public'            => true,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'hierarchical'      => true,
+        'query_var'         => true,
+        'rewrite'           => array(
+            'slug' => 'project-category'
+        )
+    );
+    register_taxonomy( 'ub_project_category', array('ub_projects'), $args );
+
+    // Add a taxonomy like tags
+    $labels = array(
+        'name'                       => 'Project Tags',
+        'singular_name'              => 'Project Tag',
+        'menu_name'                  => 'Project Tags',
+        'all_items'                  => 'All Project Tags',
+        'edit_item'                  => 'Edit Project Tag',
+        'view_item'                  => 'View Project Tag',
+        'update_item'                => 'Update Project Tag',
+        'add_new_item'               => 'Add New Project Tag',
+        'new_item_name'              => 'New Project Tag Name',
+        'parent_item'                => null,
+        'parent_item_colon'          => null,
+        'search_items'               => 'Search Project Tags',
+        'popular_items'              => 'Popular Project Tags',
+        'separate_items_with_commas' => 'Separate Project Tags with commas',
+        'add_or_remove_items'        => 'Add or remove Project Tags',
+        'choose_from_most_used'      => 'Choose from most used Project Tags',
+        'not_found'                  => 'No Project Tags found'
+    );
+    $args = array(
+        'labels'                => $labels,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_admin_column'     => true,
+        'hierarchical'          => false,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var'             => true,
+        'rewrite'               => array(
+            'slug' => 'project-tag'
+        )
+    );
+    register_taxonomy( 'ub_project_tag', 'ub_projects', $args );
+}
+add_action( 'init', 'under_boot_create_taxonomies' );
+register_taxonomy_for_object_type( 'ub_project_category', 'ub_projects' );
+register_taxonomy_for_object_type( 'ub_project_tag', 'ub_projects' );
+
 /**
  * Enqueue scripts and styles.
  */
