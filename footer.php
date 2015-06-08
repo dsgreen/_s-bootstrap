@@ -7,17 +7,15 @@
  * @package UnderBoot
  */
 ?>
+            </div><!--/row-->
+        </div><!--/#content-->
 
-            </div><!-- #content -->
-
-            <footer id="colophon" class="site-footer" role="contentinfo">
-                <div class="site-info container-fluid">
-                    <p><a href="<?php echo esc_url( __( 'http://wordpress.org/', 'under-boot' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'under-boot' ), 'WordPress' ); ?></a>
-                    <span class="sep"> | </span>
-                    <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'under-boot' ), 'UnderBoot', '<a href="http://douglasgreen.com" rel="designer">Douglas Green</a>' ); ?></p>
-                </div><!-- .site-info -->
-            </footer><!-- #colophon -->
-        </div><!-- #page -->
+        <footer role="contentinfo">
+            <div class="container-fluid">
+                <p class="small pull-left">&copy; Copyright 2015 <i><?php bloginfo( 'name' ); ?></i></p>
+                <p class="small pull-right"><a href="#top"><i class="glyphicon glyphicon-triangle-top"></i> back to top</a></p>
+            </div>
+        </footer>
 
 <?php wp_footer(); ?>
 
