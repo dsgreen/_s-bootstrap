@@ -24,37 +24,36 @@
         <![endif]-->
     </head>
     <body <?php body_class(); ?>>
-        <div id="page" class="hfeed site">
-            <a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'under-boot' ); ?></a>
-
-            <header id="masthead" class="site-header" role="banner">
-                <nav id="site-navigation" class="main-navigation navbar navbar-inverse" role="navigation">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <a class="site-title navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="primary-menu" aria-expanded="false">
-                                <span class="sr-only"><?php esc_html_e( 'Toggle navigation', 'under-boot' ); ?></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <?php wp_nav_menu(array(
-                                    // note, primary menu must be set in admin panel or 'container => false' is ignored
-                                    'theme_location' => 'primary',
-                                    'container' => false,
-                                    'items_wrap' => '%3$s'
-                                )); ?>
-                            </ul>
-                        </div>
+        <a class="sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'under-boot' ); ?></a>
+        <header role="banner" id="top">
+            <nav role="navigation" class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="primary-menu" aria-expanded="false">
+                            <span class="sr-only"><?php esc_html_e( 'Toggle navigation', 'under-boot' ); ?></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                     </div>
-                </nav><!-- #site-navigation -->
-            </header><!-- #masthead -->
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <?php wp_nav_menu(array(
+                                // note, primary menu must be set in admin panel or 'container => false' is ignored
+                                'theme_location' => 'primary',
+                                'container' => false,
+                                'items_wrap' => '%3$s'
+                            )); ?>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-            <div class="container-fluid">
-                <h2 class="lead site-description"><?php bloginfo( 'description' ); ?></h2>
-            </div>
+        <div class="container-fluid">
+            <h2 class="lead"><?php bloginfo( 'description' ); ?></h2>
+        </div>
 
-            <div id="content" class="site-content">
+        <div id="content" class="container-fluid">
+            <div class="row">
