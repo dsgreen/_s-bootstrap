@@ -1,11 +1,13 @@
 <?php
 /**
- * UnderBoot functions and definitions
+ * _s functions and definitions.
  *
- * @package UnderBoot
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package _s
  */
 
-if ( ! function_exists( 'under_boot_setup' ) ) :
+if ( ! function_exists( '_s_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -13,15 +15,14 @@ if ( ! function_exists( 'under_boot_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function under_boot_setup() {
-
+function _s_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on UnderBoot, use a find and replace
-	 * to change 'under-boot' to the name of your theme in all the template files
+	 * If you're building a theme based on _s, use a find and replace
+	 * to change '_s' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'under-boot', get_template_directory() . '/languages' );
+	load_theme_textdomain( '_s', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -37,7 +38,7 @@ function under_boot_setup() {
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
 
@@ -57,7 +58,7 @@ function under_boot_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'under-boot' ),
+		'primary' => esc_html__( 'Primary', '_s' ),
 	) );
 
 	/*
@@ -74,7 +75,7 @@ function under_boot_setup() {
 
 	/*
 	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
+	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
 	add_theme_support( 'post-formats', array(
 		'aside',
@@ -86,18 +87,18 @@ function under_boot_setup() {
 
 	// Set up the WordPress core custom background feature.
     /*
-	add_theme_support( 'custom-background', apply_filters( 'under_boot_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
     */
 
-    // Hide WordPress version in HTML source
+    // Hide WordPress version number in HTML source
     add_filter( 'the_generator', '__return_null' );
 
 }
-endif; // under_boot_setup
-add_action( 'after_setup_theme', 'under_boot_setup' );
+endif; // _s_setup
+add_action( 'after_setup_theme', '_s_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -114,44 +115,44 @@ add_action( 'after_setup_theme', '_s_content_width', 0 );
 /**
  * Register widget area.
  *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function under_boot_widgets_init() {
+function _s_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'under-boot' ),
+		'name'          => esc_html__( 'Sidebar', '_s' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'under_boot_widgets_init' );
+add_action( 'widgets_init', '_s_widgets_init' );
 
 /**
  * Custom post type example.
  *
  * @link https://codex.wordpress.org/Function_Reference/register_post_type
  */
-function under_boot_project_post_type() {
+function _s_project_post_type() {
     register_post_type( 'ub_projects',
         array(
             'labels' => array(
-                'name'               => __( 'Projects', 'under-boot' ),
-                'singular_name'      => __( 'Project',  'under-boot' ),
-                'menu_name'          => __( 'Projects', 'under-boot' ),
-                'name_admin_bar'     => __( 'Project',  'under-boot' ),
-                'all_items'          => __( 'All Projects', 'under-boot' ),
-                'add_new'            => __( 'Add New',  'under-boot' ),
-                'add_new_item'       => __( 'Add New Project',  'under-boot' ),
-                'edit_item'          => __( 'Edit Project',  'under-boot' ),
-                'new_item'           => __( 'New Project',  'under-boot' ),
-                'view_item'          => __( 'View Project',  'under-boot' ),
-                'search_items'       => __( 'Search Projects', 'under-boot' ),
-                'not_found'          => __( 'No Projects found', 'under-boot' ),
-                'not_found_in_trash' => __( 'No Projects found in Trash', 'under-boot' ),
-                'parent_item_colon'  => __( 'Parent Project', 'under-boot' )
+                'name'               => __( 'Projects', '_s' ),
+                'singular_name'      => __( 'Project',  '_s' ),
+                'menu_name'          => __( 'Projects', '_s' ),
+                'name_admin_bar'     => __( 'Project',  '_s' ),
+                'all_items'          => __( 'All Projects', '_s' ),
+                'add_new'            => __( 'Add New',  '_s' ),
+                'add_new_item'       => __( 'Add New Project',  '_s' ),
+                'edit_item'          => __( 'Edit Project',  '_s' ),
+                'new_item'           => __( 'New Project',  '_s' ),
+                'view_item'          => __( 'View Project',  '_s' ),
+                'search_items'       => __( 'Search Projects', '_s' ),
+                'not_found'          => __( 'No Projects found', '_s' ),
+                'not_found_in_trash' => __( 'No Projects found in Trash', '_s' ),
+                'parent_item_colon'  => __( 'Parent Project', '_s' )
             ),
             'public'              => true,
             'exclude_from_search' => false,
@@ -188,9 +189,9 @@ function under_boot_project_post_type() {
         )
     );
 }
-add_action( 'init', 'under_boot_project_post_type' );
+add_action( 'init', '_s_project_post_type' );
 
-function under_boot_create_taxonomies() {
+function _s_create_taxonomies() {
 
     // Add a taxonomy like categories
     $labels = array(
@@ -255,14 +256,14 @@ function under_boot_create_taxonomies() {
     );
     register_taxonomy( 'ub_project_tag', 'ub_projects', $args );
 }
-add_action( 'init', 'under_boot_create_taxonomies' );
+add_action( 'init', '_s_create_taxonomies' );
 register_taxonomy_for_object_type( 'ub_project_category', 'ub_projects' );
 register_taxonomy_for_object_type( 'ub_project_tag', 'ub_projects' );
 
 /**
  * Enqueue scripts and styles.
  */
-function under_boot_scripts() {
+function _s_scripts() {
     // Bootstrap from CDN
     wp_enqueue_style( 'bootstrap-3.3.4', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', array(), '3.3.4' );
     // various plugin styles (example)
@@ -274,15 +275,15 @@ function under_boot_scripts() {
     wp_enqueue_style( 'rs-custom', get_template_directory_uri()     . '/js/royalslider/skins/yoursite/your-custom-skin.css', array(), '9.5.7' );
     wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/css/magnific-popup.css', array(), '1.0.0' );
     */
-    // underscores/site styles (follows bootstrap & plugins in case any overrides in main site styles)
-	wp_enqueue_style( 'main-styles', get_stylesheet_uri() );
+    // _s/main site styles (follows bootstrap & plugins in case any overrides in main site styles)
+	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
     // Modernizr (SVG, media query, add CSS classes, Modernizr.testStyles() build)
     wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr.custom.07230.js', array(), '2.8.3' );
     // footer scripts
-    // underscores scripts
+    // _s scripts
     /*
-    wp_enqueue_script( 'under-boot-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-	wp_enqueue_script( 'under-boot-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+    wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
     */
     // not using jquery dependency, WordPress adds it to header by default, want it in the footer and also using CDN
     // at least 1.9.1 needed: https://github.com/twbs/bootstrap/blob/v3.3.4/bower.json
@@ -294,11 +295,11 @@ function under_boot_scripts() {
     // add plugin scripts here, followed by main site styles
     wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array(), '20150521', TRUE );
 
-    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'under_boot_scripts' );
+add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
 /**
  * Implement the Custom Header feature.

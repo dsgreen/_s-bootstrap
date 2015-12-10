@@ -4,7 +4,7 @@
  *
  * Example code for a repeater field type.
  *
- * @package UnderBoot
+ * @package _s
  */
 
 get_header(); ?>

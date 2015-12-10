@@ -3,7 +3,7 @@
  * Jetpack Compatibility File
  * See: https://jetpack.me/
  *
- * @package UnderBoot
+ * @package _s
  */
 
 /**

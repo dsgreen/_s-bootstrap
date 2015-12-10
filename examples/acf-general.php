@@ -4,7 +4,7 @@
  *
  * Example code for a basic field type (text/textarea).
  *
- * @package UnderBoot
+ * @package _s
  */
 
 get_header(); ?>

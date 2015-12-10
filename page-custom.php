@@ -4,7 +4,7 @@
  * Template Name: Custom
  * Example custom page.
  *
- * @package UnderBoot
+ * @package _s
  */
 
 get_header();

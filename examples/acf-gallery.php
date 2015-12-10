@@ -5,7 +5,7 @@
  * Example code for the gallery field type.
  * Formatted for the RoyalSlider plugin.
  *
- * @package UnderBoot
+ * @package _s
  */
 
 get_header(); ?>
