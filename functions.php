@@ -97,7 +97,7 @@ function _s_setup() {
     add_filter( 'the_generator', '__return_null' );
 
 }
-endif; // _s_setup
+endif;
 add_action( 'after_setup_theme', '_s_setup' );
 
 /**
