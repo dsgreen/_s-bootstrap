@@ -285,7 +285,7 @@ function _s_scripts() {
     wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
     */
-    // not using jquery dependency, WordPress adds it to header by default, want it in the footer and also using CDN
+    // not using jQuery dependency, WordPress adds it to header by default, we want it in the footer and we're also using CDN
     // at least 1.9.1 needed: https://github.com/twbs/bootstrap/blob/v3.3.4/bower.json
     wp_enqueue_script( 'jquery_js', '//code.jquery.com/jquery-1.11.3.min.js', array(), '1.11.3', TRUE );
     // jQuery migrate plugin if needed
