@@ -43,16 +43,16 @@
 						<span class="icon-bar"></span>
 					</button>
 				</div>
-				<div class="collapse navbar-collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<?php wp_nav_menu(array(
-							// note, primary menu must be set in admin panel or 'container => false' is ignored
-							'theme_location' => 'primary',
-							'container' => false,
-							'items_wrap' => '%3$s'
-						)); ?>
-					</ul>
-				</div>
+				<?php wp_nav_menu( array(
+						'theme_location'    => 'primary',
+						'menu'              => 'primary',
+						'depth'             => 2,
+						'container'         => 'div',
+						'container_class'   => 'collapse navbar-collapse',
+						'menu_class'        => 'nav navbar-nav navbar-right',
+						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+						'walker'            => new wp_bootstrap_navwalker())
+				); ?>
 			</div>
 		</nav>
 	</header>

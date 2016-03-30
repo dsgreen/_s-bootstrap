@@ -39,4 +39,7 @@ OR
 
 Then, update the stylesheet header in `style.scss` with your own information. Next, update or delete this readme.
 
-Note: this repo should probably be a fork, but that's not how I set it up originally. For the `_s` repo, see https://github.com/Automattic/_s.
+Notes
+-----
+* For the `_s` repo, see https://github.com/Automattic/_s.
+* Bootstrap navwalker source: https://github.com/twittem/wp-bootstrap-navwalker

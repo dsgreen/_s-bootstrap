@@ -61,6 +61,9 @@ function _s_setup() {
 		'primary' => esc_html__( 'Primary', '_s' ),
 	) );
 
+	// Register Custom Navigation Walker
+	require_once('wp_bootstrap_navwalker.php');
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
