@@ -10,6 +10,6 @@ jQuery(document).ready(function($) {
     */
 
     // add responsive class to images within post
-    $('.entry-content img').attr('class','img-responsive');
+    $('.entry-content img').addClass('img-responsive');
 
 });
