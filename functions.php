@@ -268,7 +268,7 @@ register_taxonomy_for_object_type( 'ub_project_tag', 'ub_projects' );
  */
 function _s_scripts() {
     // Bootstrap from CDN
-    wp_enqueue_style( 'bootstrap-3.3.4', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', array(), '3.3.4' );
+    wp_enqueue_style( 'bootstrap-3.3.6', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', array(), '3.3.6' );
     // various plugin styles (example)
     // could opt to put in header-{custom}.php files if not used on every page, or leave here if not too big a file load
     // RoyalSlider/Magnific Popup: http://dimsemenov.com
@@ -290,11 +290,11 @@ function _s_scripts() {
     */
     // not using jQuery dependency, WordPress adds it to header by default, we want it in the footer and we're also using CDN
     // at least 1.9.1 needed: https://github.com/twbs/bootstrap/blob/v3.3.4/bower.json
-    wp_enqueue_script( 'jquery_js', '//code.jquery.com/jquery-1.11.3.min.js', array(), '1.11.3', TRUE );
+    wp_enqueue_script( 'jquery_js', '//code.jquery.com/jquery-1.12.3.min.js', array(), '1.12.3', TRUE );
     // jQuery migrate plugin if needed
-    // wp_enqueue_script( 'jquery_js', '//code.jquery.com/jquery-migrate-1.2.1.min.js', array(), '1.2.1', TRUE );
+    // wp_enqueue_script( 'jquery_js', '//code.jquery.com/jquery-migrate-1.3.0.min.js', array(), '1.3.0', TRUE );
     // Bootstrap JS from CDN
-    wp_enqueue_script( 'bootstrap_js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array(), '3.3.4', TRUE );
+    wp_enqueue_script( 'bootstrap_js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array(), '3.3.6', TRUE );
     // add plugin scripts here, followed by main site styles
     wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array(), '20150521', TRUE );
 
