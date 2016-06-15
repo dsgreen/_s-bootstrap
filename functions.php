@@ -271,12 +271,8 @@ function _s_scripts() {
     wp_enqueue_style( 'bootstrap-3.3.6', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', array(), '3.3.6' );
     // various plugin styles (example)
     // could opt to put in header-{custom}.php files if not used on every page, or leave here if not too big a file load
-    // RoyalSlider/Magnific Popup: http://dimsemenov.com
     /*
-    wp_enqueue_style( 'royalslider', get_template_directory_uri()    . '/js/royalslider/royalslider.css', array(), '9.5.7' );
-    wp_enqueue_style( 'rs-default', get_template_directory_uri()     . '/js/royalslider/skins/default/rs-default.css', array(), '9.5.7' );
-    wp_enqueue_style( 'rs-custom', get_template_directory_uri()     . '/js/royalslider/skins/yoursite/your-custom-skin.css', array(), '9.5.7' );
-    wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/css/magnific-popup.css', array(), '1.0.0' );
+    wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/your-custom.css', array(), '1.0.0' );
     */
     // _s/main site styles (follows bootstrap & plugins in case any overrides in main site styles)
 	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
