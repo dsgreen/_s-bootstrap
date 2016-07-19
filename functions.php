@@ -89,12 +89,10 @@ function _s_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-    /*
 	add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
-    */
 
     // Hide WordPress version number in HTML source
     add_filter( 'the_generator', '__return_null' );
@@ -303,7 +301,7 @@ add_action( 'wp_enqueue_scripts', '_s_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
