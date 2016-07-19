@@ -30,8 +30,8 @@
 <body <?php body_class(); ?>>
 	<a class="sr-only" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-	<header role="banner" id="top">
-		<nav role="navigation" class="navbar navbar-inverse">
+	<header id="top" class="site-header" role="banner">
+		<nav class="navbar navbar-inverse main-navigation" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
