@@ -137,7 +137,7 @@ add_action( 'widgets_init', '_s_widgets_init' );
  * @link https://codex.wordpress.org/Function_Reference/register_post_type
  */
 function _s_project_post_type() {
-    register_post_type( 'ub_projects',
+    register_post_type( '_s_projects',
         array(
             'labels' => array(
                 'name'               => __( 'Projects', '_s' ),
@@ -221,7 +221,7 @@ function _s_create_taxonomies() {
             'slug' => 'project-category'
         )
     );
-    register_taxonomy( 'ub_project_category', array('ub_projects'), $args );
+    register_taxonomy( '_s_project_category', array('_s_projects'), $args );
 
     // Add a taxonomy like tags
     $labels = array(
@@ -255,11 +255,11 @@ function _s_create_taxonomies() {
             'slug' => 'project-tag'
         )
     );
-    register_taxonomy( 'ub_project_tag', 'ub_projects', $args );
+    register_taxonomy( '_s_project_tag', '_s_projects', $args );
 }
 add_action( 'init', '_s_create_taxonomies' );
-register_taxonomy_for_object_type( 'ub_project_category', 'ub_projects' );
-register_taxonomy_for_object_type( 'ub_project_tag', 'ub_projects' );
+register_taxonomy_for_object_type( '_s_project_category', '_s_projects' );
+register_taxonomy_for_object_type( '_s_project_tag', '_s_projects' );
 
 /**
  * Enqueue scripts and styles.
