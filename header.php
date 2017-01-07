@@ -10,9 +10,7 @@
  */
 
 ?><!DOCTYPE html>
-<!--[if lt IE 9]>  <html class="no-js lte-ie9 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 9]>     <html class="no-js lte-ie9" <?php language_attributes(); ?>> <![endif]-->
-<!--[if !IE]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<html class="no-js" <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
