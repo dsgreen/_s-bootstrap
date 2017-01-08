@@ -266,7 +266,7 @@ register_taxonomy_for_object_type( '_s_project_tag', '_s_projects' );
  */
 function _s_scripts() {
     // Bootstrap from CDN
-    wp_enqueue_style( 'bootstrap-3.3.7', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7' );
+    wp_enqueue_style( 'bootstrap-3.3.7', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7' );
     // plugin styles (example)
     // could opt to put in header-{custom}.php files if not used on every page, or leave here if not too big a file load
     //wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/your-custom.css', array(), '1.0.0' );
@@ -279,9 +279,9 @@ function _s_scripts() {
 	//wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
     // not using jQuery dependency, WordPress adds it to header by default, we want it in the footer and we're also using CDN
     // at least 1.9.1 needed: https://github.com/twbs/bootstrap/blob/v3.3.4/bower.json
-    wp_enqueue_script( 'jquery_js', '//code.jquery.com/jquery-1.12.4.min.js', array(), '1.12.4', TRUE );
+    wp_enqueue_script( 'jquery_js', 'https://code.jquery.com/jquery-1.12.4.min.js', array(), '1.12.4', TRUE );
     // Bootstrap JS from CDN
-    wp_enqueue_script( 'bootstrap_js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), '3.3.7', TRUE );
+    wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), '3.3.7', TRUE );
     // plugin scripts, followed by main site script
     wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array(), '20150521', TRUE );
 
