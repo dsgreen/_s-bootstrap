@@ -162,7 +162,7 @@ function _s_project_post_type() {
             'show_in_nav_menus'   => true,
             'show_in_menu'        => true,
             'show_in_admin_bar'   => true,
-            'menu_position'       => 20,
+            'menu_position'       => 5,
             'menu_icon'           => 'dashicons-admin-page',
             'capability_type'     => 'post',
             'hierarchical'        => true,
