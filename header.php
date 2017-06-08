@@ -57,5 +57,5 @@
 		<h2 class="lead"><?php bloginfo( 'description' ); ?></h2>
 	</div>
 
-	<div id="content" class="container-fluid">
+	<div id="content" class="site-content container-fluid">
 		<div class="row">

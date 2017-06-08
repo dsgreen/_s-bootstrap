@@ -14,7 +14,7 @@
 	</div><!--/#content-->
 
     <footer class="site-footer" role="contentinfo">
-        <div class="container-fluid">
+        <div class="site-info container-fluid">
             <p class="small pull-left">&copy; Copyright 2015 <i><?php bloginfo( 'name' ); ?></i></p>
             <p class="small pull-right"><a href="#top"><i class="glyphicon glyphicon-triangle-top"></i> <?php esc_html_e( 'back to top', '_s' ); ?></a></p>
         </div>

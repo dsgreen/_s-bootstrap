@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-		<main id="main" role="main" class="col-sm-9">
+		<main id="main" class="site-main col-sm-9" role="main">
 
 			<section class="error-404 not-found">
 				<header class="page-header">
