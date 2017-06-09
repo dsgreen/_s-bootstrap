@@ -265,25 +265,25 @@ register_taxonomy_for_object_type( '_s_project_tag', '_s_projects' );
  * Enqueue scripts and styles.
  */
 function _s_scripts() {
-    // Bootstrap from CDN
-    wp_enqueue_style( 'bootstrap-3.3.7', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7' );
-    // plugin styles (example)
-    // could opt to put in header-{custom}.php files if not used on every page, or leave here if not too big a file load
-    //wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/your-custom.css', array(), '1.0.0' );
-    // _s/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
-	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
-    // Modernizr (SVG, media query, add CSS classes, Modernizr.testStyles() build)
-    wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr.custom.07230.js', array(), '2.8.3' );
-    // footer scripts follow, default _s scripts first
-    //wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-	//wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-    // not using jQuery dependency, WordPress adds it to header by default, we want it in the footer and we're also using CDN
-    // at least 1.9.1 needed: https://github.com/twbs/bootstrap/blob/v3.3.4/bower.json
-    wp_enqueue_script( 'jquery_js', 'https://code.jquery.com/jquery-1.12.4.min.js', array(), '1.12.4', TRUE );
-    // Bootstrap JS from CDN
-    wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), '3.3.7', TRUE );
-    // plugin scripts, followed by main site script
-    wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array(), '20150521', TRUE );
+  // Bootstrap, plugins, other
+  wp_enqueue_style( 'bootstrap-3.3.7', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7' );
+  wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
+  // plugin styles: could opt to put in header-{custom}.php files for select pages
+  //wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/your-custom.css', array(), '1.0.0' );
+
+  // _s/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
+  wp_enqueue_style( '_s-style', get_stylesheet_uri() );
+
+  // Modernizr (SVG, media query, add CSS classes, Modernizr.testStyles() build)
+  wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr.custom.07230.js', array(), '2.8.3' );
+
+  // footer scripts
+  //wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+  //wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+  wp_enqueue_script( 'jquery_js', 'https://code.jquery.com/jquery-1.12.4.min.js', array(), '1.12.4', TRUE );
+  wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), '3.3.7', TRUE );
+  // plugin scripts, followed by main site script
+  wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array(), '20150521', TRUE );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
