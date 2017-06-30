@@ -80,8 +80,9 @@ function _s_setup() {
 		'default-image' => '',
 	) ) );
 
-    // Hide WordPress version number in HTML source
-    add_filter( 'the_generator', '__return_null' );
+  // Hide WordPress version number in HTML source
+	// original source/license: unknown
+  add_filter( 'the_generator', '__return_null' );
 
 }
 endif;
@@ -174,6 +175,7 @@ require get_template_directory() . '/inc/jetpack.php';
 
 /*
  * remove WordPress emoji script from head
+ * original source/license: unknown
  */
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
