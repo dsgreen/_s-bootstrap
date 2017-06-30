@@ -68,7 +68,10 @@ function _s_setup() {
 		'default-image' => '',
 	) ) );
 
-  // Hide WordPress version number in HTML source
+	// Add theme support for selective refresh for widgets.
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	// Hide WordPress version number in HTML source
 	// original source/license: unknown
   add_filter( 'the_generator', '__return_null' );
 
