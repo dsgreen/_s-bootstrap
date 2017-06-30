@@ -1,5 +1,8 @@
 <?php
 
+/*
+ * place in function _s_setup() {}
+ */
 // support for custom image sizes (example)
 add_image_size( 'xyz-sm', 100, 100 );
 add_image_size( 'xyz-md', 300, 300 );
@@ -11,6 +14,17 @@ function my_custom_sizes( $sizes ) {
 				'grid-md' => __( 'XYZ MD' )
 		) );
 }
+/*
+ * Enable support for Post Formats.
+ * See https://developer.wordpress.org/themes/functionality/post-formats/
+ */
+add_theme_support( 'post-formats', array(
+	'aside',
+	'image',
+	'video',
+	'quote',
+	'link',
+) );
 
 /**
  * Custom post type example.
