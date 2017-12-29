@@ -2,7 +2,7 @@
 /**
  * Template part for displaying posts
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package _s
  */
@@ -25,6 +25,8 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
+
+	<?php _s_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
