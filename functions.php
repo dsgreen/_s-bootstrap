@@ -131,7 +131,7 @@ function _s_scripts() {
   //wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/your-custom.css', array(), '1.0.0' );
 
   // _s/main site styles (follows Bootstrap & plugins in case any overrides in main site styles)
-  wp_enqueue_style( '_s-style', get_stylesheet_uri() );
+  wp_enqueue_style( 'main', get_stylesheet_uri() );
 
   // Modernizr (SVG, media query, add CSS classes, Modernizr.testStyles() build)
   wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr.custom.07230.js', array(), '2.8.3' );
