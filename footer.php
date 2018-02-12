@@ -15,7 +15,7 @@
 
     <footer class="site-footer" role="contentinfo">
         <div class="site-info container-fluid">
-            <p class="small pull-left">&copy; Copyright 2015 <i><?php bloginfo( 'name' ); ?></i></p>
+            <p class="small pull-left">&copy; Copyright 2018 <?php bloginfo( 'name' ); ?></p>
             <p class="small pull-right"><a href="#top"><i class="fa fa-angle-up"></i> <?php esc_html_e( 'back to top', '_s' ); ?></a></p>
         </div>
     </footer>
