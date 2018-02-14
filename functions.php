@@ -131,7 +131,9 @@ add_action( 'widgets_init', '_s_widgets_init' );
  */
 function _s_scripts() {
   // Bootstrap, plugins, other
-  wp_enqueue_style( 'bootstrap-3.3.7', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7' );
+	wp_enqueue_style( 'bootstrap-3.3.7', get_stylesheet_directory_uri() . '/bootstrap-3.3.7/dist/css/bootstrap.min.css', array(), '3.3.7' );
+	// ...or load from CDN
+  // wp_enqueue_style( 'bootstrap-3.3.7', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7' );
   wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
   // plugin styles: could opt to put in header-{custom}.php files for select pages
   //wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/your-custom.css', array(), '1.0.0' );
@@ -143,10 +145,15 @@ function _s_scripts() {
   wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr.custom.07230.js', array(), '2.8.3' );
 
   // footer scripts
-  wp_enqueue_script( 'jquery_js', 'https://code.jquery.com/jquery-1.12.4.min.js', array(), '1.12.4', TRUE );
-  wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), '3.3.7', TRUE );
+  // jQuery from CDN. Remove 'jquery' dependency in Bootstrap array to use CDN and load jQuery in footer.
+	wp_enqueue_script( 'jquery_js', 'https://code.jquery.com/jquery-1.12.4.min.js', array(), '1.12.4', TRUE );
+	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/bootstrap-3.3.7/dist/js/bootstrap.min.js', array(), '3.3.7', TRUE );
+	// ...or load from CDN
+	// wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), '3.3.7', TRUE );
   // plugin scripts, followed by main site script
-  wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array(), '20150521', TRUE );
+	wp_enqueue_script( 'jquery_scrollTo', get_template_directory_uri() . '/js/jquery.scrollTo.min.js', array(), '2.1.3', TRUE );
+	wp_enqueue_script( 'jquery_localScroll', get_template_directory_uri() . '/js/jquery.localScroll.min.js', array(), '1.4.0', TRUE );
+  wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array(), '1.0', TRUE );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
