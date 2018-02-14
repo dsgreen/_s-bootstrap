@@ -9,12 +9,11 @@ Some things have been added to the default `underscores` theme, including:
 
 * The `container-fluid` class to the main content container
 * The `no-js` class to the HTML tag
-* HTML5 Shiv and IE media query polyfill
 * The main navigation menu uses the Bootstrap navbar component and the Bootstrap navwalker
 * Example code for custom post thumbnail sizes
 * Loads Bootstrap and jQuery assets via their respective CDNs
 * Includes a customized version of the Modernizr library
-* Includes a `main.js` placeholder file
+* Includes a `main.js` file with SVG to PNG code example, and adds `img-responsive` class to post thumbnails
 * `underscores` CSS overridden by Bootstrap is commented out
 * A `_custom.scss` file with Bootstrap overrides
 
