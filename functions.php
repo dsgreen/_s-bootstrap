@@ -42,6 +42,9 @@ if ( ! function_exists( '_s_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+    // custom image sizes
+		// ...
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary', '_s' ),
@@ -61,6 +64,9 @@ if ( ! function_exists( '_s_setup' ) ) :
 			'gallery',
 			'caption',
 		) );
+
+		// post formats as needed
+		// ...
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
