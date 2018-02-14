@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-		<main id="main" class="site-main col-sm-8" role="main">
+		<main id="main" class="site-main col-sm-9" role="main">
 
 		<?php
 		if ( have_posts() ) : ?>
