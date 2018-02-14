@@ -4,14 +4,18 @@
  * place in function _s_setup() {}
  */
 // support for custom image sizes (example)
-add_image_size( 'xyz-sm', 100, 100 );
-add_image_size( 'xyz-md', 300, 300 );
+add_image_size( 'grid-sm', 100, 100 );
+add_image_size( 'grid-md', 300, 300 );
+add_image_size( 'extra-large', 1200, 800 );
+add_image_size( 'medium-large', 1024, 683, array( 'center', 'center') );
 
 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
 function my_custom_sizes( $sizes ) {
 		return array_merge( $sizes, array(
-				'grid-sm' => __( 'XYZ SM' ),
-				'grid-md' => __( 'XYZ MD' )
+				'grid-sm' => __( 'Grid Small' ),
+				'grid-md' => __( 'Grid Medium' ),
+				'extra-large' => __( 'Extra Large' ),
+				'medium-large' => __( 'Medium Large' )
 		) );
 }
 /*
@@ -26,6 +30,16 @@ add_theme_support( 'post-formats', array(
 	'link',
 ) );
 
+// footer widget areas
+register_nav_menus( array(
+	'footer-1' => esc_html__( 'Footer 1', '_s' ),
+) );
+
+register_nav_menus( array(
+	'footer-2' => esc_html__( 'Footer 2', '_s' ),
+) );
+
+// custom post type example, before enqueue scripts
 /**
  * Custom post type example.
  *
