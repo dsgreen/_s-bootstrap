@@ -49,36 +49,46 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 ///*--------------------------------------------------------------
 //# Normalize
 //--------------------------------------------------------------*/
+// not needed, in Bootstrap
 //@import "normalize";
 
 ///*--------------------------------------------------------------
 //# Typography
 //--------------------------------------------------------------*/
+// not needed, Bootstrap instead
+// but, could use to set color
 //@import "typography/typography";
 
 ///*--------------------------------------------------------------
 //# Elements
 //--------------------------------------------------------------*/
+// not needed, Bootstrap instead
+// but, could use some element styling, see img tag
 //@import "elements/elements";
 
 ///*--------------------------------------------------------------
 //# Forms
 //--------------------------------------------------------------*/
+// not needed, Bootstrap or custom instead
+// but, could use some button styling
 //@import "forms/forms";
 
 ///*--------------------------------------------------------------
 //# Navigation
 //--------------------------------------------------------------*/
+// could use some link styling, or use custom
 //@import "navigation/navigation";
 
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
+// could be replaced with Bootstrap 4 accessibility features
 @import "modules/accessibility";
 
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
+// WordPress default alignment classes
 @import "modules/alignments";
 
 /*--------------------------------------------------------------
@@ -89,11 +99,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
+// might add unnecessary margin
 @import "site/secondary/widgets";
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+// various WP
 @import "site/site";
 
 /*--------------------------------------------------------------
