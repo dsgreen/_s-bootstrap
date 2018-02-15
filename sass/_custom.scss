@@ -7,23 +7,6 @@
   border-radius: 0;
   &.navbar-default,
   &.navbar-inverse {
-    .navbar-nav {
-      // font adjustments in navigation bar
-      > li {
-//        font-size:11px;
-//        text-transform:uppercase;
-        > a {
-//          color: $main_nav_color;
-          &:focus {
-//            outline:none;
-          }
-          &:hover,
-          &:focus {
-//            color: &main_nav_color_hover;
-          }
-        }
-      }
-    }
     .navbar-toggle {
       border:none;
     }
