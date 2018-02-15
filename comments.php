@@ -5,7 +5,7 @@
  * This is the template that displays the area of the page that contains both the current comments
  * and the comment form.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package _s
  */
@@ -28,10 +28,10 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 			<?php
 			$comment_count = get_comments_number();
-			if ( 1 === $comment_count ) {
+			if ( '1' === $comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', '_s' ),
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', '_s' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
