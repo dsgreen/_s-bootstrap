@@ -51,7 +51,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		) );
 
 		// Register Custom Navigation Walker
-		require_once('wp_bootstrap_navwalker.php');
+		require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
