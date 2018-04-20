@@ -1,0 +1,19 @@
+{
+  "name": "s-bootstrap",
+  "version": "1.0.0",
+  "description": "The _s WordPress theme with simple Bootstrap integration",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsgreen/_s-bootstrap.git"
+  },
+  "author": "Douglas Green",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/dsgreen/_s-bootstrap/issues"
+  },
+  "homepage": "https://github.com/dsgreen/_s-bootstrap#readme"
+}
