@@ -14,9 +14,9 @@
 	</div><!--/#content-->
 
     <footer class="site-footer" role="contentinfo">
-        <div class="site-info container-fluid">
-            <p class="small pull-left">&copy; Copyright 2018 <?php bloginfo( 'name' ); ?></p>
-            <p class="small pull-right"><a href="#top"><i class="fa fa-angle-up"></i> <?php esc_html_e( 'back to top', '_s' ); ?></a></p>
+        <div class="container-fluid site-info">
+            <p class="small float-left">&copy; Copyright 2018 <?php bloginfo( 'name' ); ?></p>
+            <p class="small float-right"><a href="#top"><i class="fa fa-angle-up"></i> <?php esc_html_e( 'Back to top', '_s' ); ?></a></p>
         </div>
     </footer>
 

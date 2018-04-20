@@ -11,7 +11,7 @@ get_header();
 //get_header('custom');
 ?>
 
-                <main id="main" class="site-main col-sm-9" role="main">
+                <main class="col-md-9 site-main" id="main" role="main">
 
                     <?php while ( have_posts() ) : the_post(); ?>
 

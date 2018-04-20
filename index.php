@@ -14,14 +14,14 @@
 
 get_header(); ?>
 
-		<main id="main" class="site-main col-sm-9" role="main">
+    <main class="col-md-9 site-main" id="main" role="main">
 
 		<?php
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
 				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					<h1 class="sr-only page-title"><?php single_post_title(); ?></h1>
 				</header>
 
 			<?php
