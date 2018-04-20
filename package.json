@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/dsgreen/_s-bootstrap/issues"
   },
-  "homepage": "https://github.com/dsgreen/_s-bootstrap#readme"
+  "homepage": "https://github.com/dsgreen/_s-bootstrap#readme",
+  "devDependencies": {
+    "bootstrap": "^4.1.0",
+    "grunt": "^1.0.2",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.1.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
 }
