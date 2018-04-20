@@ -2,3 +2,4 @@
 _dev/
 node_modules/
 *.map
+sass/style.css
