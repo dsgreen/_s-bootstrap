@@ -1,6 +1,4 @@
+# Workflow
 _dev/
-.idea/
-node_modules
-src/scss/style.css
-src/scss/style.css.map
+node_modules/
 *.map
