@@ -144,7 +144,8 @@ function _s_scripts() {
 
   // footer scripts
   // note: 'jquery' dependency removed from Bootstrap array to load custom jQuery in footer (not the bundled WP version in header).
-	wp_enqueue_script( 'jquery_js', get_template_directory_uri() . 'js/jquery.min.js', array(), '3.3.1', TRUE );
+	wp_enqueue_script( 'jquery_js', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.3.1', TRUE );
+	wp_enqueue_script( 'popper_js', get_template_directory_uri() . '/js/popper.min.js', array(), '1.14.3', TRUE );
 	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.1.0', TRUE );
 	// plugin scripts, followed by main site script
 	wp_enqueue_script( 'jquery_scrollTo', get_template_directory_uri() . '/js/jquery.scrollTo.min.js', array(), '2.1.2', TRUE );
